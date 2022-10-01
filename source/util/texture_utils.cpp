@@ -1,6 +1,5 @@
 #include <cstdint>
 #include <cstring>
-// #include <functional>
 
 #include "util/color_utils.h"
 
@@ -46,7 +45,6 @@ namespace libtp::util::texture
     // That means when maintaining the relative order, if we have to swap the colors:
 
     // in the case of left being greater than right:
-
     // 0b00 will swap to 0b01
     // 0b01 will swap to 0b00
     // 0b10 will swap to 0b11
@@ -68,8 +66,8 @@ namespace libtp::util::texture
         }
         else
         {
-            uint32_t r = ( ( bits >> 1 ) & 0x55555555 ) ^ 0x55555555;
-            return bits ^ r;
+            uint32_t mask = ( ( bits >> 1 ) & 0x55555555 ) ^ 0x55555555;
+            return bits ^ mask;
         }
     }
 
