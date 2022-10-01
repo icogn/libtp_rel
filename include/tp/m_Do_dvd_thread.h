@@ -12,7 +12,6 @@
 #include "tp/JKRArchive.h"
 #include "tp/JKRHeap.h"
 #include "tp/JKRMemArchive.h"
-// #include "f_pc/f_pc_node.h"
 #include "tp/c_list.h"
 #include "tp/c_node.h"
 #include "gc_wii/OS.h"
