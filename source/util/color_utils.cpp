@@ -8,8 +8,8 @@ namespace libtp::util::color
         uint32_t g = ( rgb565Val & 0x7e0 ) >> 5;
         uint32_t b = rgb565Val & 0x1f;
 
-        // Here we are doing a quicker (0.22 * r + 0.72 *g + 0.06) which uses
-        // multiplies and shifts rather than division.
+        // Here we are doing a quicker (0.22 * r + 0.72 * g + 0.06 * b) which
+        // uses multiplies and shifts rather than division.
         uint32_t combined = 30480413 * r + 49085341 * g + 8312839 * b;
         uint8_t shifted = ( combined >> 24 ) & 0xff;
 
